@@ -1,2 +1,2 @@
 #!/bin/bash
-rsync -u --exclude='*.html' --ignore-existing *.html ..
+cp -un *.html ../
