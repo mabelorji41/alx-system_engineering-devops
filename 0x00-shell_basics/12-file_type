@@ -1,2 +1,2 @@
 #!/bin/bash
-file iamafile mv iamafile /tmp
+mv iamafile /tmp file iamafile
