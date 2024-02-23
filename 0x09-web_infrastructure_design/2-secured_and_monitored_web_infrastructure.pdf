@@ -1,0 +1,12 @@
+Description: 
+WEB SERVER: Client sents request to web server, web server receives and responds to clients requests using HTTP protocol. 
+APP SERVER: Provide a runtime environment where applications can run, execute and manages the execution of dynamic code, handles requests and ensures the proper functioning of the application. 
+CODE BASE: the complete body of source code for a software program, component or system. 
+DATA BASE: Manage data systematically. 
+LOAD BALANCER: In a distributed environment, application servers may be part of a cluster, and load balancing ensures that incoming requests are distributed among the servers to optimize performance and avoid overloading any single server. 
+ACTIVE - ACTIVE: all the servers are running 
+ACTIVE - PASSIVE: some servers act are active where the vassive servers act as backup. 
+• Secure Socket Layer = Public/ Private key match. 
+• Creates SSL handshake certificate that ensures connection is safe HTTPS 
+• Without SSL, private data is sent unencrypted. 
+• Firewall controls the trarlic and protects its from unautorized network

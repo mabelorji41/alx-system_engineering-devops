@@ -1,0 +1,27 @@
+ Why I added every additional element 
+
+* Load Balancer: 
+* Why it's added: The load balancer is added to distribute incoming traffic across multiple web servers (Web Server 1 and Web Server 2). This ensures high availability, fault tolerance, and scalability. By evenly distributing the workload, the load balancer prevents any single server from becoming overwhelmed with requests, thus improving the overall performance and reliability of the website. 
+
+* Application Server: 
+* Why it's added: The application server is added to separate the application logic from the web server. This architectural decision improves scalability and maintainability. By offloading the application processing to a dedicated server, the infrastructure can handle a larger volume of requests and allows for easier maintenance and updates to the application codebase. 
+
+* Database: 
+* Why it's added: The database server is added to store and manage the website's data. This includes user accounts, content, configurations, and other critical information. By using a database, the infrastructure can provide data persistence, enable complex data queries, and support features like user authentication, content management, and e-commerce functionality. The round-robin distribution algorithm is a commonly used approach for load balancing that provides a simple and effective way to distribute incoming traffic across multiple servers. 
+
+Fair distribution: The round-robin algorithm ensures that each server gets an equal share of requests, preventing any single server from becoming overloaded. The load balancer is enabling an Active-Active setup. Active-Active setups distribute traffic across multiple active servers simultaneously, providing better scalability and performance, while Active-Passive setups involve one active server serving traffic and one or more standby servers ready to take over in case of failure, providing redundancy and failover capabilities. 
+A database Primary-Replica (Master-Slave) cluster works by replicating data from a primary (master) database server to one or more replica (slave) database servers. Primary-Replica database cluster provides redundancy, fault tolerance, and scalability by replicating data from a primary server to one or more replica servers. It ensures data consistency, high availability, and improved performance for applications and clients accessing the database. The primary node and replica node in a database Primary-Replica (Master-Slave) cluster serve different roles in regard to the application accessing the database. The primary node is responsible for handling write operations and serving as the authoritative source of data, while replica nodes replicate data from the primary node and handle read operations to improve scalability and performance for applications accessing the database. Each node in the cluster serves a specific role in maintaining data consistency, high availability, and optimal performance for the application. 
+
+Issues 
+* Single Point of Failure (SPOF): * The infrastructure has potential single points of failure (SPOFs) in several areas: 
+* The load balancer: If the load balancer fails, it would disrupt the distribution of traffic to the web servers, leading to potential downtime for the website. 
+* The primary database server: If the primary database server fails, it would impact write operations and data integrity, potentially leading to data loss or inconsistency. 
+* Lack of redundancy: While the infrastructure includes multiple servers, it may lack redundancy in critical components like the load balancer and database servers. 
+* Security Issues: 
+* No firewall: The infrastructure lacks a firewall to protect against unauthorized access and malicious attacks. A firewall is essential for controlling incoming and outgoing traffic, enforcing security policies, and filtering out potential threats. 
+* No HTTPS: The absence of HTTPS encryption leaves the website vulnerable to interception and eavesdropping, especially when sensitive information such as user credentials or payment details is transmitted between clients and servers. Implementing HTTPS encryption with SSL/TLS certificates is crucial for ensuring data confidentiality, integrity, and authenticity. 
+* No Monitoring: 
+* The lack of monitoring makes it challenging to detect and address issues proactively, potentially leading to prolonged downtime, performance degradation, or security breaches. 
+* Without monitoring, administrators have limited visibility into the health, performance, and security of the infrastructure components, making it difficult to identify and mitigate potential problems before they escalate. 
+* Implementing a monitoring system is essential for tracking the availability, performance, and security of the infrastructure, enabling administrators to receive alerts, analyze metrics, and take proactive measures to ensure the smooth operation of the website.
+
